@@ -1,0 +1,50 @@
+
+
+canvas {
+    border:10px solid black;
+    background-color: #ee0f27;
+    color: black;
+}
+
+h1 {
+    color: white;
+    background-image: url("https://lh3.googleusercontent.com/proxy/ZOrbHQTX9t3Zn-_hk_o5itSOklFrQ7MOFZE16zY-Vo8iJE3gVbDVdJyXeWesYO8qJosBGy8GbUA5WAqsFbveFJeMacEy5uTRN7T4oubEQweMxqeFlAiJOW0QORHvrPTq5czAmos")
+}
+
+.gameButton1
+{
+	height: 30px;
+	width: 100px;
+    border: 2px solid black;
+	margin-right: 10px;
+	background-color: #3dff31;
+	margin-top:20px;
+    font-size:15px;
+}
+
+.gameButton2
+{
+	height: 30px;
+	width: 100px;
+    border: 2px solid black;
+	margin-right: 0px;
+	background-color: #3dff31;
+	margin-top:20px;
+    font-size:15px;
+}
+
+.resetButton
+{
+    height: 50px;
+    width: 120px;
+    margin-right: 0px;
+    border: 4px solid black;
+    background-color: #ff1315;
+    margin-top:10px;
+    font-size:30px;
+}
+body
+{
+	text-align: center;
+	
+}
