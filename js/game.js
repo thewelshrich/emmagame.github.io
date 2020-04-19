@@ -6,7 +6,7 @@ var myScoreBackground;
 function startGame() {
     myGamePiece = new component(50, 50, "img/virus.gif", 50, 150, "image");
     myGamePiece.gravity = 0.0;
-    myScoreBackground = new component(150,30, "rgba(247,252,255,1)", 320, 18);
+    myScoreBackground = new component(150, 30, "rgba(247,252,255,1)", 320, 18);
     myScore = new component("20px", "Consolas", "black", 330, 40, "text");
     myGameArea.start();
 
@@ -18,14 +18,14 @@ var myGameArea = {
         this.canvas.width = 480;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[2]);
+        document.getElementById('game-container').appendChild(this.canvas);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 10);
     },
     clear: function () {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
-}
+};
 
 function component(width, height, color, x, y, type) {
     this.type = type;
@@ -58,20 +58,20 @@ function component(width, height, color, x, y, type) {
             ctx.fillStyle = color;
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
-    }
+    };
     this.newPos = function () {
         this.gravitySpeed += this.gravity;
         this.x += this.speedX;
         this.y += this.speedY + this.gravitySpeed;
         this.hitBottom();
-    }
+    };
     this.hitBottom = function () {
         var rockbottom = myGameArea.canvas.height - this.height;
         if (this.y > rockbottom) {
             this.y = rockbottom;
             this.gravitySpeed = 0;
         }
-    }
+    };
     this.crashWith = function (otherobj) {
         var myleft = this.x;
         var myright = this.x + (this.width);
