@@ -1,4 +1,6 @@
-
+body {
+    touch-action: manipulation;
+}
 
 canvas {
     border:10px solid black;
